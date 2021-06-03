@@ -22,4 +22,4 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 }
 
 // https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html
-
+// https://www.samouczekprogramisty.pl/kurs-programowania-java/

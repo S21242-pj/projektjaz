@@ -1,5 +1,6 @@
 package pl.edu.pjwstk.projektJAZ.movieservice.service;
 
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -7,7 +8,7 @@ import pl.edu.pjwstk.projektJAZ.movieservice.exceptions.ResourceNotFoundExceptio
 import pl.edu.pjwstk.projektJAZ.movieservice.model.Movie;
 import pl.edu.pjwstk.projektJAZ.movieservice.repository.MovieRepository;
 
-import java.util.List;
+
 
 @Service
 public class MovieService {
@@ -32,11 +33,11 @@ public class MovieService {
 
     public Movie updateMovie(Long id, Movie movie) {
         var movieToUpdate = getMovieById(id);
-        if (movie.getMovieName() != null) {
-            movieToUpdate.setMovieName(movie.getMovieName());
+        if (movie.getTitle() != null) {
+            movieToUpdate.setTitle(movie.getTitle());
         }
-        if (movie.getMovieCategory() != null) {
-            movieToUpdate.setMovieCategory(movie.getMovieCategory());
+        if (movie.getCategories() != null) {
+            movieToUpdate.setCategories(movie.getCategories());
         }
         return addMovie(movieToUpdate);
     }
